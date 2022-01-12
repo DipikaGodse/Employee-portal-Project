@@ -1,0 +1,66 @@
+<mat-toolbar class="mat-elevation-z8">
+    <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+        <mat-icon *ngIf="!sidenav.opened">
+            menu
+        </mat-icon>
+        <mat-icon *ngIf="sidenav.opened">
+            close
+        </mat-icon>
+    </button>
+    <h1>Employee Portal</h1>
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+        <h3>SoftwareSolutions</h3>
+        <mat-divider></mat-divider>
+
+        <button mat-button class="menu-button" (click)="click1()">
+            <mat-icon>home</mat-icon>
+            <span>Home</span>
+        </button>
+        <button mat-button class=" menu-button " (click)="click2() ">
+            <mat-icon>person</mat-icon>
+            <span>View Details</span>
+        </button>
+        <button mat-button class="menu-button " (click)="click3()">
+            <mat-icon>person</mat-icon>
+            <span>Leave Application</span>
+        </button>
+        <button mat-button class="menu-button "  routerLink="/vls">
+            <mat-icon>person</mat-icon>
+            <span>View Leave Status</span>
+        </button>
+
+        <button mat-button class="menu-button "  routerLink="/applyexit">
+            <mat-icon>info</mat-icon>
+            <span>Exit Company</span>
+        </button>
+        <button mat-button class="menu-button "  routerLink="/viewexitstatus">
+            <mat-icon>info</mat-icon>
+            <span>View Exit Status</span>
+        </button>
+
+        <button mat-button class="menu-button "  routerLink="/employeelogin">
+            <mat-icon>power_settings_new</mat-icon>
+            <span>Logout</span>
+        </button>
+
+        <mat-divider></mat-divider>
+
+        <button mat-button class="menu-button ">
+            <mat-icon>help</mat-icon>
+            <span>Help</span>
+        </button>
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="content mat-elevation-z8 ">
+            <div>
+                <h1 style="text-align: center; color: #47152f; padding-top: 7rem; font-size: 40px; padding-bottom: 30px;"> Welcome To Employee Portal</h1>
+                <p style="color: #47152f; text-align: center; ">Here employee can able to view Details .<br><br> Employee can apply for leave application,exit application.<br><br>It is a tool that helps a employee manage its data, applications, and information<br><br>                        more easily through personalized views.
+                </p>
+            </div>
+                </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

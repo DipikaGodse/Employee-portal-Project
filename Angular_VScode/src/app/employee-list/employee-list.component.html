@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-dark navStyle ">
+    <div class="container-fluid">
+        <a class="navbar-brand" >Employee List</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/wel" >Home</a>
+                </li>   
+            </ul>
+            <ul class="navbar-nav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Logout</a>
+                    </li>
+                  
+                </ul>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<table class = "table table-striped"  style=" margin: auto; margin-top: 1%; width: 70%; justify-content: center;"  >
+    <thead>
+        <tr>
+            <th> First Name</th>
+            <th> Last Name </th>
+            <th> Email Id</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let employee of employees" >
+            <td> {{ employee.firstName }} </td>
+            <td> {{ employee.lastName }} </td>
+            <td> {{ employee.email }} </td>
+            <td>
+                <button (click) = "updateEmployee(employee.employee_details_id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteEmployee(employee.employee_details_id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "employeeDetails(employee.employee_details_id)" class = "btn btn-info" style="margin-left: 10px"> View</button> 
+            </td>
+        </tr>
+    </tbody>
+</table>

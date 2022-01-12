@@ -1,0 +1,20 @@
+.login-wrapper {
+    margin: auto;
+    margin-top: 1%;
+    width: 45%;
+    justify-content: center;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+button {
+    margin-bottom: 10px;
+}
+
+.navStyle {
+   
+    background: #520a2e;
+
+}

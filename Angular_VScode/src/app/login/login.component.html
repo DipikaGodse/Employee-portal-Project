@@ -1,0 +1,17 @@
+<div class="login-wrapper">
+    <div class="card">
+        <div class="card-body">
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+                <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+                <input formControlName="email" type="text" id="inputLogin" class="form-control" name="email" placeholder="Enter Email">
+                <small class="text-danger" *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')">*Email Id is requird</small>
+
+                <input formControlName="password" type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" autocomplete="on">
+                <small class="text-danger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*Password is requird</small>
+                <div>
+                    <button class="btn btn-lg btn-primary btn-block" style="  background: #47152f; color: white;" type="submit">Log in</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "signupUsers": [
+    {
+      "fullname": "abhijit",
+      "email": "abhijitkolambe63@gmail.com",
+      "password": "12122112",
+      "mobile": 1111111111,
+      "id": 1
+    },
+    {
+      "fullname": "KK",
+      "email": "abc@gmail.com",
+      "password": "123",
+      "mobile": 1212121212,
+      "id": 2
+    },
+    {
+      "fullname": "aj",
+      "email": "acc@gmail.com",
+      "password": "123",
+      "mobile": 159,
+      "id": 3
+    },
+    {
+      "fullname": "dip",
+      "email": "d@gmail.com",
+      "password": "123",
+      "mobile": 2222222222,
+      "id": 4
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

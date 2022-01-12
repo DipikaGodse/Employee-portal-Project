@@ -1,0 +1,33 @@
+ <nav class="navbar navbar-expand-lg navbar-dark navStyle">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Employee Portal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+            </div>
+        </div>
+    </nav>
+
+<div class="login-wrapper">
+    <div class="card">
+        <div class="card-body">
+            <form [formGroup]="loginForm" (ngSubmit)="mainlogin()">
+                <h1 > Login</h1>
+                <input formControlName="email" type="text" id="inputLogin" class="form-control" name="email" placeholder="Enter email">
+                <small class="text-danger" *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')">*email is requird</small>
+
+                <input formControlName="password" type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" autocomplete="on">
+                <small class="text-danger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*Password is requird</small>
+
+                <input formControlName="usertype" type="radio" id="html" name="usertype" value="Admin">
+                <label for="html">Admin</label><br>
+                <input formControlName="usertype" type="radio" id="html" name="usertype" value="Employee">
+                <label for="html">Employee</label><br>
+                <div>
+                    <button class="btn btn-lg  btn-block" style="background: #47152f; color: white;"type="submit">Log in</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
